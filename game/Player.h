@@ -120,11 +120,11 @@ typedef struct {
 // powerups
 enum {
 	// standard powerups
-	POWERUP_QUADDAMAGE = 0, 
+	POWERUP_QUADDAMAGE = 0,
 	POWERUP_HASTE,
 	POWERUP_REGENERATION,
 	POWERUP_INVISIBILITY,
-		
+
 	// ctf powerups
 	POWERUP_CTF_MARINEFLAG,
 	POWERUP_CTF_STROGGFLAG,
@@ -135,6 +135,14 @@ enum {
 	POWERUP_GUARD,
 	POWERUP_DOUBLER,
 	POWERUP_SCOUT,	// == 1.2 / protocol 69's POWERUP_MAX-1
+// MICHAEL MOD START
+	//player abilities
+	POWERUP_UNDYING,//player gets extremely high health regen, making them effectively invinvincible for duration
+	POWERUP_BERSERKER, //player get unlimited ammo, minor attack speed boost and increased damage
+	POWERUP_POLTERGEIST, //player goes invisible with a damage increase, but weapons shoot slower
+	POWERUP_DESTROYER, //player gets an extremely large damage boost for a very short duration(will one tap almost anything)
+	POWERUP_SPEEDSTER, //players gets a attack speed,movement speed and regen speed boost. 
+// MICHAEL MOD END	
 
 	POWERUP_MODERATOR, // Note: This has to be here.  Otherwise, it breaks syncronization with some list elsewhere
 		

@@ -26,7 +26,7 @@
 // RAVEN END
 
 #ifdef _WIN32
-#include "TypeInfo.h"
+#include "TypeInfo"
 #else
 #include "NoGameTypeInfo.h"
 #endif
@@ -171,7 +171,7 @@ void Cmd_ListSpawnArgs_f( const idCmdArgs &args ) {
 
 	for ( i = 0; i < ent->spawnArgs.GetNumKeyVals(); i++ ) {
 		const idKeyValue *kv = ent->spawnArgs.GetKeyVal( i );
-		gameLocal.Printf( "\"%s\"  "S_COLOR_WHITE"\"%s\"\n", kv->GetKey().c_str(), kv->GetValue().c_str() );
+		gameLocal.Printf( "\"%s\"  " S_COLOR_WHITE "\"%s\"\n", kv->GetKey().c_str(), kv->GetValue().c_str() );
 	}
 }
 
@@ -498,7 +498,7 @@ void GiveStuffToPlayer( idPlayer* player, const char* name, const char* value )
 	}
 
 	if (idStr::Icmp(name, "ammoregen") == 0) {
-		player->GivePowerUp( POWERUP_AMMOREGEN, -1 );
+		player->GivePowerUp( POWERUP_AMMOREGEN, SEC2MS(45.0f));
 		return;
 	}
 	
@@ -517,6 +517,28 @@ void GiveStuffToPlayer( idPlayer* player, const char* name, const char* value )
 		return;
 	}
 // RAVEN END
+// MICHAEL MOD START
+	if (idStr::Icmp(name, "undying") == 0) {
+		player->GivePowerUp(POWERUP_UNDYING, SEC2MS(45.0f));
+		return;
+	}
+	if (idStr::Icmp(name, "berserker") == 0) {
+		player->GivePowerUp(POWERUP_BERSERKER, SEC2MS(45.0f));
+		return;
+	}
+	if (idStr::Icmp(name, "poltergeist") == 0) {
+		player->GivePowerUp(POWERUP_POLTERGEIST, SEC2MS(45.0f));
+		return;
+	}
+	if (idStr::Icmp(name, "destroyer") == 0) {
+		player->GivePowerUp(POWERUP_DESTROYER, SEC2MS(45.0f));
+		return;
+	}
+	if (idStr::Icmp(name, "speedster") == 0) {
+		player->GivePowerUp(POWERUP_SPEEDSTER, SEC2MS(45.0f));
+		return;
+	}
+// MICHAEL MOD END
 
 	if ( !idStr::Icmp ( name, "wpmod_all" ) ) {
 		player->GiveWeaponMods ( 0xFFFFFFFF );

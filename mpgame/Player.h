@@ -124,7 +124,6 @@ enum {
 	POWERUP_HASTE,
 	POWERUP_REGENERATION,
 	POWERUP_INVISIBILITY,
-		
 	// ctf powerups
 	POWERUP_CTF_MARINEFLAG,
 	POWERUP_CTF_STROGGFLAG,
@@ -193,7 +192,7 @@ typedef enum {
 const int	ASYNC_PLAYER_TOURNEY_STATUS_BITS = idMath::BitsForInteger( PTS_NUM_STATES );
 
 class idInventory {
-public:
+public:  
 	int						maxHealth;
 	int						weapons;
 // RITUAL BEGIN

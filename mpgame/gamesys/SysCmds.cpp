@@ -517,7 +517,6 @@ void GiveStuffToPlayer( idPlayer* player, const char* name, const char* value )
 		return;
 	}
 // RAVEN END
-
 	if ( !idStr::Icmp ( name, "wpmod_all" ) ) {
 		player->GiveWeaponMods ( 0xFFFFFFFF );
 		return;
