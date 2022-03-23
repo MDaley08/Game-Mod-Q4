@@ -6,7 +6,7 @@ windowDef Desktop
 	backcolor	0,0,0,1
 	definevec4	"corner"	0.564,0.603,0.286,0.4
 	definevec4	"corner_0"	0.564,0.603,0.286,0
-	definevec4	"white"		1,1,1,1
+	definevec4	"white"	1,1,1,1
 	definevec4	"white_8"	1,1,1,0.8
 	definevec4	"white_5"	1,1,1,0.5
 	definevec4	"white_4"	1,1,1,0.4
@@ -16,17 +16,17 @@ windowDef Desktop
 	definevec4	"cr_green"	0.835,1,0.654,0.8
 	definevec4	"cr_green_0"	0.835,1,0.654,0
 	definevec4	"white_6"	1,1,1,0.6
-	definevec4	"black"		0,0,0,1
+	definevec4	"black"	0,0,0,1
 	definevec4	"orange"	0.890,0.537,0,1
 	definevec4	"yellow_8"	1,0.745,0.137,0.8
 	definevec4	"grey1_4"	0.435,0.435,0.435,0.4
-  	definefloat	"tooltip_x_offset"	"gui::mousex" - 255
-  	definefloat	"tooltip_y_offset"	"gui::mousey" - 186
-  	defineicon	"fve"	"gfx/guis/mainmenu/icon_favorite.tga"
-  	defineicon	"pse"	"gfx/guis/mainmenu/icon_locked.tga"
-  	defineicon	"dse"	"gfx/guis/mainmenu/icon_dedserver.tga"
-  	defineicon	"pbe"	"gfx/guis/mainmenu/icon_pb.tga"	
-  	defineicon	"arr"	"gfx/guis/mainmenu/icon_arrow.tga"
+	definefloat	"tooltip_x_offset"	gui::mousex-255
+	definefloat	"tooltip_y_offset"	gui::mousey-186
+	defineicon	"fve"	"gfx/guis/mainmenu/icon_favorite.tga"
+	defineicon	"pse"	"gfx/guis/mainmenu/icon_locked.tga"
+	defineicon	"dse"	"gfx/guis/mainmenu/icon_dedserver.tga"
+	defineicon	"pbe"	"gfx/guis/mainmenu/icon_pb.tga"
+	defineicon	"arr"	"gfx/guis/mainmenu/icon_arrow.tga"
 	float	"active"	0
 	float	"dest"	0
 	float	"curr"	0
@@ -39,7 +39,7 @@ windowDef Desktop
 	float	"tooltip_y"	0
 	float	"tooltip_w"	0
 	float	"tooltip_h"	0
-	float	"music"		0
+	float	"music"	0
 	float	"video_num"	0
 	float	"video_check"	0
 	float	"credits"	0
@@ -725,7 +725,7 @@ windowDef Desktop
 		}
 		windowDef topbar
 		{
-			rect	-400,0,1045,129
+			rect	-399,0,1045,129
 			visible	1
 			background	"gfx/guis/mainmenu/topbar"
 			matcolor	1,1,1,1
@@ -792,7 +792,7 @@ windowDef Desktop
 			}
 			windowDef main_b4
 			{
-				rect	-1,292,413,52
+				rect	0,292,413,52
 				visible	1
 				background	"gfx/guis/mainmenu/b1_dark"
 				matcolor	1,1,1,0.4
@@ -862,8 +862,8 @@ windowDef Desktop
 				rect	44,274,314,23
 				visible	1
 				forecolor	1,1,1,0.8
-				text	"#str_200002"
-				textscale	.33
+				text	"Help Screen"
+				textscale	0.33
 				font	"fonts/marine"
 			}
 			windowDef main_t_b4
@@ -871,8 +871,8 @@ windowDef Desktop
 				rect	44,304,314,23
 				visible	1
 				forecolor	1,1,1,0.8
-				text	"#str_200009"
-				textscale	.33
+				text	"c"
+				textscale	0.33
 				font	"fonts/marine"
 			}
 			windowDef main_t_b9
