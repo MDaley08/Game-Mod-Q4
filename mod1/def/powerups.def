@@ -295,7 +295,7 @@ entityDef powerup_destroyer
 entityDef powerup_speedster
 {
 	"inherit"			"powerup"
-	"editor_usage"			"Haste"
+	"editor_usage"			"Speedster"
 
 	"model"				"models/pick_ups/mp_pickups/mp_haste.lwo"
 	"type"				"15"	// MUST MATCH ONE OF THE DEFINES IN PLAYER.H
